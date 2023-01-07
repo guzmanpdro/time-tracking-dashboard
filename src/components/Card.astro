@@ -1,0 +1,55 @@
+---
+import svgEllipsis from "/images/icon-ellipsis.svg";
+
+export interface Props {
+  title: string;
+  currentTime: number;
+  lastTime: number;
+}
+
+const { title, currentTime, lastTime, } = Astro.props;
+---
+
+<li class="link-card">
+  <h2>
+    {title}
+    <img src={svgEllipsis} alt="Ellipsis" />
+  </h2>
+  <h3>{currentTime}hrs
+    <span class="previous">Last - {lastTime}</span>
+  </h3>
+</li>
+
+<style>
+  .link-card {
+    padding: 1rem 1.3rem;
+    border-radius: 0.35rem;
+    list-style: none;
+    background-color: var(--dark-blue);
+    background-size: 400%;
+    border-radius: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  h3 {
+    font-size: 3.2rem;
+    font-weight: 300;
+  }
+
+  .previous {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: #444;
+  }
+</style>
