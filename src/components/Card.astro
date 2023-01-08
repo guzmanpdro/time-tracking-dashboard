@@ -10,7 +10,7 @@ export interface Props {
 const { title, currentTime, lastTime, } = Astro.props;
 ---
 
-<li class="link-card">
+<li class="card">
   <h2>
     {title}
     <img src={svgEllipsis} alt="Ellipsis" />
@@ -21,16 +21,10 @@ const { title, currentTime, lastTime, } = Astro.props;
 </li>
 
 <style>
-  .link-card {
-    padding: 1rem 1.3rem;
-    border-radius: 0.35rem;
-    list-style: none;
-    background-color: var(--dark-blue);
-    background-size: 400%;
-    border-radius: 1rem;
-  }
-
   h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0;
     font-size: 1.8rem;
     font-weight: 500;
@@ -38,6 +32,10 @@ const { title, currentTime, lastTime, } = Astro.props;
   }
 
   h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5rem 0 0 0;
     font-size: 3.2rem;
     font-weight: 300;
   }
