@@ -12,18 +12,12 @@ import imageJeremy from '/images/image-jeremy.png'
   </section>
   
   <section class="time-period">
-    <div>
       <input type="radio" name="period-time" id="daily">
       <label for="daily">Daily</label>
-    </div>
-    <div>
       <input type="radio" name="period-time" id="weekly">
       <label for="weekly">Weekly</label>
-    </div>
-    <div>
       <input type="radio" name="period-time" id="monthly">
-      <label for="monthly">Monthly</label>
-    </div>
+      <label for="monthly">Monthly</label>    
   </section>
 </div>
 
@@ -31,12 +25,9 @@ import imageJeremy from '/images/image-jeremy.png'
   .profile-card {
     padding: 0;
   }
-
-  .profile-card section {
-    padding: 3.2rem 2.4rem;
-  }
   
   .profile-info {
+    padding: 3.2rem 2.4rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -58,5 +49,21 @@ import imageJeremy from '/images/image-jeremy.png'
   img {
     border: .35rem solid #fff;
     border-radius: 50px;  
+  }
+
+  .time-period {
+    padding: 2.5rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label:hover {
+    cursor: pointer;
+    color: #fff;
   }
 </style>
