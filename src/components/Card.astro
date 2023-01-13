@@ -1,6 +1,4 @@
 ---
-import svgEllipsis from "/images/icon-ellipsis.svg";
-
 export interface Props {
   title: string;
   currentTime: number;
@@ -14,7 +12,7 @@ const { title, currentTime, lastTime, } = Astro.props;
   <article>
     <h2>
       {title}
-      <img src={svgEllipsis} alt="Ellipsis" />
+      <img src="/images/icon-ellipsis.svg" alt="Ellipsis" />
     </h2>
     <h3>{currentTime}hrs
       <span class="previous">Last - {lastTime}</span>
@@ -37,14 +35,15 @@ const { title, currentTime, lastTime, } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #fff;
     margin: .5rem 0 0 0;
     font-size: 3.2rem;
     font-weight: 300;
   }
 
   .previous {
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--pale-blue)
   }
 
   p {
@@ -54,7 +53,7 @@ const { title, currentTime, lastTime, } = Astro.props;
   }
 
   .card {
-    padding: 3.2rem 0 0;
+    padding: 3.4rem 0 0;
     list-style: none;
     background-size: 400%;
     border-radius: 1.6rem;
@@ -68,25 +67,49 @@ const { title, currentTime, lastTime, } = Astro.props;
 
   .card.work {
     background-color: var(--light-orange);
+    background-image: url('/images/icon-work.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 90% -16%;
   }
 
   .card.play {
     background-color: var(--soft-blue);
+    background-image: url('/images/icon-play.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 90% -16%;
   }
 
   .card.study {
     background-color: var(--light-red);
+    background-image: url('/images/icon-study.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 90% -16%;
   }
 
   .card.exercise {
     background-color: var(--lime-green);
+    background-image: url('/images/icon-exercise.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 90% 0%;
   }
 
   .card.social {
     background-color: var(--violet);
+    background-image: url('/images/icon-social.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 90% -36%;
   }
 
   .card.self {
     background-color: var(--soft-orange);
+    background-image: url('/images/icon-self-care.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 90% -16%;
   }
 </style>
