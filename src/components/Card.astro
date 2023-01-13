@@ -10,14 +10,16 @@ export interface Props {
 const { title, currentTime, lastTime, } = Astro.props;
 ---
 
-<li class="card">
-  <h2>
-    {title}
-    <img src={svgEllipsis} alt="Ellipsis" />
-  </h2>
-  <h3>{currentTime}hrs
-    <span class="previous">Last - {lastTime}</span>
-  </h3>
+<li class:list={`card ${title.toLowerCase()}`}>
+  <article>
+    <h2>
+      {title}
+      <img src={svgEllipsis} alt="Ellipsis" />
+    </h2>
+    <h3>{currentTime}hrs
+      <span class="previous">Last - {lastTime}</span>
+    </h3>
+  </article>
 </li>
 
 <style>
@@ -49,5 +51,42 @@ const { title, currentTime, lastTime, } = Astro.props;
     margin-top: 0.5rem;
     margin-bottom: 0;
     color: #444;
+  }
+
+  .card {
+    padding: 3.2rem 0 0;
+    list-style: none;
+    background-size: 400%;
+    border-radius: 1.6rem;
+  }
+
+  .card article {
+    padding: 2.4rem 3.2rem ;
+    background-color: var(--dark-blue);
+    border-radius: 1.6rem;;
+  }
+
+  .card.work {
+    background-color: var(--light-orange);
+  }
+
+  .card.play {
+    background-color: var(--soft-blue);
+  }
+
+  .card.study {
+    background-color: var(--light-red);
+  }
+
+  .card.exercise {
+    background-color: var(--lime-green);
+  }
+
+  .card.social {
+    background-color: var(--violet);
+  }
+
+  .card.self {
+    background-color: var(--soft-orange);
   }
 </style>
