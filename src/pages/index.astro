@@ -1,13 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CardProfile from '../components/CardProfile.astro';
-import ListOfCard from '../components/ListOfCard.astro';
+import Layout from '../layouts/Layout.astro'
+import CardProfile from '../components/CardProfile.astro'
+import ListOfCard from '../components/ListOfCard/ListOfCard.jsx'
 ---
 
 <Layout title="Time Tracking Dashboard">
 	<main>
     <CardProfile />
-		<ListOfCard />
+    <ListOfCard client:load/>
 	</main>
 </Layout>
 
