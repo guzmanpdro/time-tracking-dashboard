@@ -1,0 +1,102 @@
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  margin: .5rem 0 0;
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.previous {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--pale-blue)
+}
+
+.card-list {
+  padding: 3.4rem 0 0;
+  list-style: none;
+  border-radius: 1.6rem;
+}
+
+.card-list article {
+  padding: 2.4rem 3.2rem ;
+  background-color: var(--dark-blue);
+  border-radius: 1.6rem;;
+}
+
+.card-list.work {
+  background-color: var(--light-orange);
+  background-image: url('/images/icon-work.svg');
+  background-repeat: no-repeat;
+  background-position: 90% -16%;
+}
+
+.card-list.play {
+  background-color: var(--soft-blue);
+  background-image: url('/images/icon-play.svg');
+  background-repeat: no-repeat;
+  background-position: 90% -16%;
+}
+
+.card-list.study {
+  background-color: var(--light-red);
+  background-image: url('/images/icon-study.svg');
+  background-repeat: no-repeat;
+  background-position: 90% -16%;
+}
+
+.card-list.exercise {
+  background-color: var(--lime-green);
+  background-image: url('/images/icon-exercise.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 0%;
+}
+
+.card-list.social {
+  background-color: var(--violet);
+  background-image: url('/images/icon-social.svg');
+  background-repeat: no-repeat;
+  background-position: 90% -36%;
+}
+
+.card-list.self {
+  background-color: var(--soft-orange);
+  background-image: url('/images/icon-self-care.svg');
+  background-repeat: no-repeat;
+  background-position: 90% -16%;
+}
+
+@media screen and (min-width: 1024px) {
+  h3 {
+    margin: 3rem 0 0;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 5.5rem;
+  }
+
+  .profile-card {
+    align-self: flex-start;
+  }
+
+  .previous {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1270px) {
+  .card-list {
+    padding-top: 4.5rem;
+  }
+}
