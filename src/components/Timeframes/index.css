@@ -1,0 +1,28 @@
+.time-period {
+  padding: 2.5rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  color: hsl(235deg 100% 81%)
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  color: #fff;
+}
+
+label:hover {
+  transition: all .2s;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .time-period {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
