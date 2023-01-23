@@ -1,0 +1,18 @@
+.link-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+  gap: 2.5rem;
+  padding: 0;
+  margin: 2.5rem 0 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-card-grid {
+    margin: 0;
+  }
+
+  /* .card-list article {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  } */
+}
