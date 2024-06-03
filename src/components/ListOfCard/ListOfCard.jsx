@@ -8,7 +8,7 @@ export default function ListOfCard() {
   const $timeframe = useStore(timeframe)
 
   return (
-    <ul role="list" className="link-card-grid">
+    <ul className="link-card-grid">
       {
         dataMock.map(el => {
           const { title, timeframes } = el;
