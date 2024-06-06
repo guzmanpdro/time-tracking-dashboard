@@ -3,7 +3,7 @@ import Timeframes from './Timeframes/Timeframes';
 import imageJeremy from '/images/image-jeremy.png'
 ---
 
-<article class="card profile-card">
+<div class="card profile-card">
   <section class="profile-info">
     <img src={imageJeremy} alt="Jeremy" width="60" height="60"/>
     <div>
@@ -12,8 +12,8 @@ import imageJeremy from '/images/image-jeremy.png'
     </div>
   </section>
   
-  <Timeframes client:load />
-<article/>
+  <Timeframes/>
+<div/>
 
 <style>
   .profile-card {
